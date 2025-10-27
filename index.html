@@ -1,569 +1,641 @@
 <!DOCTYPE HTML>
-
 <html>
 	<head>
-		<title>Anirudh Shankar</title>
+		<title>Anirudh Shankar - AI & ML Engineer</title>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable-no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+
+		<style>
+			/* Project Article Styles */
+			.project-article-item {
+				margin-bottom: 2.5em;
+				padding-bottom: 2.5em;
+				border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+			}
+			.project-article-item:last-child {
+				margin-bottom: 0;
+				padding-bottom: 0;
+				border-bottom: none;
+			}
+			.image-wrap-left {
+				float: left;
+				margin: 0.25em 1.5em 1em 0;
+				width: 250px; 
+			}
+			.image-wrap-left img {
+				width: 100%;
+				height: 250px;
+				object-fit: cover; 
+			}
+			.project-article-item .inner::after {
+				content: "";
+				display: table;
+				clear: both;
+			}
+			.project-highlights {
+				margin-top: 1.5em;
+				font-size: 0.9em;
+			}
+			.project-highlights ul {
+				list-style: none;
+				padding-left: 0;
+				margin-top: 0.75em;
+				margin-bottom: 0;
+			}
+			.project-highlights li {
+				margin-bottom: 0.6em;
+				display: flex;
+				align-items: flex-start;
+			}
+			.project-highlights .icon {
+				margin-right: 10px;
+				min-width: 16px;
+				margin-top: 4px;
+				color: #555;
+			}
+			
+			/* Publication List Styles */
+			.publications-list {
+				list-style: none;
+				padding-left: 0;
+				counter-reset: pub-counter;
+				margin-top: 2em;
+			}
+			.pub-item {
+				margin-bottom: 1.5em;
+				padding-bottom: 1.5em;
+				border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+				position: relative;
+				padding-left: 3.5em;
+			}
+			.pub-item:last-child {
+				border-bottom: none;
+				margin-bottom: 0;
+			}
+			.pub-item::before {
+				counter-increment: pub-counter;
+				content: counter(pub-counter, decimal-leading-zero);
+				font-size: 1.5em;
+				font-weight: 600;
+				color: #ccc;
+				position: absolute;
+				left: 0;
+				top: 0;
+				line-height: 1.2;
+			}
+			.pub-title {
+				display: block;
+				font-weight: 600;
+				font-size: 1.1em;
+				margin-bottom: 0.25em;
+			}
+			.pub-details {
+				font-size: 0.9em;
+				color: #555;
+			}
+			.pub-details span {
+				margin-right: 0.5em;
+				padding-right: 0.5em;
+				border-right: 1px solid #ddd;
+			}
+			.pub-details span:last-child {
+				border-right: none;
+			}
+
+			/* Skill Grid Styles */
+			.skills-grid .inner h4 {
+				display: flex;
+				align-items: center;
+				font-size: 1.1em;
+			}
+			.skills-grid .inner .icon {
+				margin-right: 12px;
+				color: #444; /* Icon color */
+			}
+			.skills-grid .inner p {
+				font-size: 0.95em;
+				margin-top: 0.75em;
+			}
+			
+			/* STYLES TO COMPACT LEFT SIDEBAR (HEADER) */
+			#header {
+				padding: 1.5em; /* Reduced overall padding */
+			}
+			#header > header .avatar {
+				width: 5em; /* Smaller avatar */
+				height: 5em;
+				margin-bottom: 0.75em; /* Less space below avatar */
+			}
+			#header > header h1 {
+				font-size: 1.5em; /* Smaller name */
+			}
+			#header > header p {
+				font-size: 0.75em; /* Smaller subtitle */
+				line-height: 1.5em; 
+				margin-top: 0.5em;
+			}
+			#nav ul li a {
+				padding: 0.25em 0; /* Less padding on nav items */
+				font-size: 0.85em; /* Slightly smaller nav font */
+			}
+			#header > nav {
+				margin-top: 1.25em; /* Less space above nav */
+			}
+			#header > footer {
+				margin-top: 1.25em; /* Less space above footer */
+			}
+			#header > footer .icons li {
+				margin: 0 0.5em 0 0; /* Tighter icon spacing */
+			}
+			
+		</style>
+		
 	</head>
 	<body class="is-preload">
 
-		<!-- Header -->
-			<section id="header">
+		<section id="header">
 				<header>
-					<span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
+					<span class="image avatar"><img src="images/avatar.jpg" alt="Anirudh Shankar" /></span>
 					<h1 id="logo"><a href="#">Anirudh Shankar</a></h1>
-					
+					<p>AI & Machine Learning Engineer<br />
+					MSc Data, Diagnostics & Digital Health<br />
+					University of Warwick</p>
 				</header>
 				<nav id="nav">
 					<ul>
 						<li><a href="#one" class="active">About Me</a></li>
-						<li><a href="#two">Work Experience</a></li>
-						<li><a href="#three">Projects</a></li>
+						<li><a href="#education">Education</a></li> <li><a href="#two">Work Experience</a></li>
+						<li><a href="#three">Research & Projects</a></li>
 						<li><a href="#four">Publications</a></li>
-						<li><a href="#five">Additional Details</a></li>
-						<li><a href="#six">References</a></li>
+						<li><a href="#five">Skills & Certifications</a></li> <li><a href="#six">References</a></li>
 
 					</ul>
 				</nav>
 				<footer>
 					<ul class="icons">
-						<li><a href="https://www.linkedin.com/in/anirudh-shankar-b96bb5223/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a href="https://www.instagram.com/anirudh2406/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="https://github.com/Anirudh2401" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-						<li><a href="https://scholar.google.com/citations?user=R4J2vcUAAAAJ&hl=en" class="icon solid fa-graduation-cap"><span class="label">Google Scholar</span></a></li>
-						<li><a href="mailto:anirudh2406@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="https://www.linkedin.com/in/anirudh-shankar-b96bb5223/" class="icon brands fa-linkedin" target="_blank"><span class="label">LinkedIn</span></a></li>
+						<li><a href="https://github.com/Anirudh2401" class="icon brands fa-github" target="_blank"><span class="label">GitHub</span></a></li>
+						<li><a href="https://scholar.google.com/citations?user=R4J2vcUAAAAJ&hl=en" class="icon solid fa-graduation-cap" target="_blank"><span class="label">Google Scholar</span></a></li>
+						<li><a href="mailto:anirudh206@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 					</ul>
 				</footer>
 			</section>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+		<div id="wrapper">
 
-				<!-- Main -->
-					<div id="main">
+				<div id="main">
 
-						<!-- One -->
-							<section id="one">
+						<section id="one">
 								<div class="image main" data-position="center">
 									<img src="images/banner_2.jpeg" alt="" />
 								</div>
 								<div class="container">
-	<header class="major">
-		<h2>About Me</h2>
-	</header>
-	<p>
-		I am a dedicated <strong>Machine Learning and AI practitioner</strong> passionate about applying data-driven intelligence 
-		to solve complex problems in <strong>healthcare, predictive analytics, and oncology</strong>. My work focuses on developing 
-		trustworthy, explainable, and high-impact AI systems that bridge the gap between data science and real-world clinical applications.
-	</p>
-	<p>
-		One of my key projects involved developing a <strong>Stacking Hybrid AI model</strong> to predict optimal 
-		<strong>diabetes drug recommendations</strong> and potential <strong>adverse drug reactions (ADRs)</strong> based on patient health features. 
-		This end-to-end system integrates <strong>fuzzy logic-based feature engineering</strong>, <strong>Principal Component Analysis (PCA)</strong>, 
-		<strong>hyperparameter optimization</strong>, and <strong>meta-learning</strong> within a multi-model stacking framework. 
-		The full pipeline is deployed via a <strong>Streamlit-based interface</strong> to ensure usability in real-world clinical environments.
-	</p>
-	<p>
-		Building on this foundation, I am expanding my focus to <strong>oncology-based AI applications</strong>, including 
-		<strong>treatment response prediction</strong>, <strong>survival analysis</strong>, and <strong>adverse event forecasting</strong>. 
-		My goal is to contribute to the next generation of <strong>AI-driven precision oncology systems</strong> that enhance 
-		patient outcomes through interpretable and responsible artificial intelligence.
-	</p>
-	<p>
-		Beyond healthcare, I have extensive experience in <strong>machine learning pipeline design</strong>, 
-		<strong>optimization strategies</strong>, <strong>deep learning architectures</strong>, and <strong>ensemble methods</strong>. 
-		My expertise spans both <strong>research-driven experimentation</strong> and <strong>production-ready deployment</strong>, 
-		using tools such as Python, Scikit-learn, XGBoost, TensorFlow, CatBoost, and Streamlit.
-	</p>
-	<p>
-		I am motivated by innovation, collaboration, and the pursuit of building AI systems that are not only intelligent 
-		but also ethical, interpretable, and clinically meaningful. I am currently seeking opportunities as a 
-		<strong>Machine Learning Engineer</strong>, <strong>Data Scientist</strong>, or <strong>AI Researcher</strong> 
-		in healthcare and oncology-focused AI initiatives.
-	</p>
-</div>
-
+									<header class="major">
+										<h2>About Me</h2>
+									</header>
+									<p>
+										I am an AI and Machine Learning engineer currently pursuing an <strong>MSc in Data, Diagnostics and Digital Health</strong> at the University of Warwick. My professional focus is on developing and deploying scalable, full-stack AI frameworks for clinical decision support, particularly in <strong>oncology</strong>, as an <strong>AI Engineering Lead at OncoFlow</strong>.
+									</p>
+									<p>
+										I have a strong background in leading research projects from conception to deployment, including a <strong>Government of India-funded</strong> undergraduate dissertation on generative AI for dental diagnostics and research into <strong>automated breast cancer detection</strong> in support of the NHS.
+									</p>
+									<p>
+										With over <strong>15 research papers</strong> published in Scopus-indexed journals and conferences, I am passionate about bridging advanced AI techniques with real-world healthcare applications to improve patient outcomes. I am seeking opportunities to contribute to high-impact AI initiatives in healthcare, diagnostics, and precision medicine.
+									</p>
+								</div>
 							</section>
 
-						<!-- Two -->
+						<section id="education">
+								<div class="container">
+									<h3>Academic Qualifications</h3>
+									<ul>
+										<li><b>Master of Science in Data, Diagnostics and Digital Health</b> – University of Warwick (2024-2025)</li>
+										<li><b>Bachelor of Technology in Artificial Intelligence and Machine Learning</b> – M S Ramaiah University of Applied Sciences (2020-2024)</li>
+										<li><b>IELTS Overall 7.0</b> (CEFR Level C1)</li>
+									</ul>
+								</div>
+							</section>
+
 						<section id="two">
-							<section id="two">
-								<div class="container">
-									<h3>Work Experience</h3>
-									<p>Here are some of the professional experiences that shaped my journey in AI, ML, and data science.</p>
+							<div class="container">
+								<h3>Work Experience</h3>
+								<p>My professional experience spans AI engineering in a clinical setting, data science internships at major technology firms, and marketing/recruitment for a top university.</p>
+								
+								<article class="experience-item">
+									<h4>AI Engineering Lead (Builder Role)</h4>
+									<p><strong>OncoFlow</strong> | Jul 2025 - Present</p>
+									<ul>
+										<li>Led the full-stack deployment of a scalable AI framework for advanced AI health agents, leveraging AWS cloud infrastructure.</li>
+										<li>Engineered the core AI pipeline for Multi-Disciplinary Team (MDT) tumour boards and benchmarked multiple LLMs, selecting a state-of-the-art model for clinical decision support.</li>
+										<li>Developed and optimized a specialised clinical assistant chatbot by quantizing an instruction-tuned LLM into a highly efficient Small Language Model (SLM) for deployment.</li>
+										<li>Coordinated technical roadmaps and project timelines while reporting directly to the CEO and CMO.</li>
+									</ul>
+								</article>
 
-									<div class="experience">
-										<div style="display: flex; align-items: center;">
-											<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fuk.linkedin.com%2Fcompany%2Foncoflow&psig=AOvVaw0sKktiA9zBfo261TuEGHWv&ust=1760037591798000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCPiAxo2plZADFQAAAAAdAAAAABAE" alt="OncoFlow" style="width: 150px; height: 100px; margin-right: 20px;">
-											<div style="display: flex; flex-direction: column; justify-content: center;">
-												<h4>OncoFlow</h4>
-												<p>AI Engineering Lead</p>
-												<p>Jun 2025- Present</p>
-											</div>
-										</div>
-										<ul>
-											<li>Leadin the development of AI based pipelines for tumour board detection</li>
-											<li>Developing AI Frameworks for AI health agents</li>
-										</ul>
-									</div>
-							
-									<div class="experience">
-										<div style="display: flex; align-items: center;">
-											<img src="https://www.inovaeducation.com/wp-content/uploads/2020/03/Warwick.png" alt="University of Warwick" style="width: 150px; height: 100px; margin-right: 20px;">
-											<div style="display: flex; flex-direction: column; justify-content: center;">
-												<h4>University of Warwick</h4>
-												<p>Postgraduate Student Ambassador</p>
-												<p>Nov 2024 - Sept 2025</p>
-											</div>
-										</div>
-										<ul>
-											<li>Collaborated with university staff to improve communication channels and address postgraduate student concerns.</li>
-											<li>Represented the university at open days and fairs, engaging with prospective students to answer queries and share personal experiences.</li>
-											<li>Mentored incoming students, providing support and fostering a sense of belonging in the postgraduate community.</li>
-											<li>Utilized analytical and presentation skills to compile feedback from postgraduate students and present actionable insights to faculty members.</li>
-										</ul>
-									</div>
+								<article class="experience-item">
+									<h4>Postgraduate Student Ambassador</h4>
+									<p><strong>University of Warwick</strong> | Oct 2024 - Sept 2025</p>
+									<ul>
+										<li>Led recruitment and marketing initiatives by presenting to diverse audiences of prospective students and stakeholders at university-wide events.</li>
+										<li>Acted as a key marketing representative, creating engaging digital content (blogs, social media) to promote academic programs and showcase campus life.</li>
+										<li>Guided and supported groups of prospective students, facilitating engagement across both digital and in-person platforms.</li>
+									</ul>
+								</article>
+
+								<article class="experience-item">
+									<h4>Data Science Intern</h4>
+									<p><strong>L&T Technologies and Services</strong> | Jan 2024 - Apr 2024</p>
+									<ul>
+										<li>Integrated a chatbot using Flask with an AI Large Language Model.</li>
+										<li>Predicted missing parts in Engineering Bill of Materials (EBOM) of a seat assembly.</li>
+										<li>Analyzed 3D CAD Model data for No Good Position and clash detection for Digital Prototype Manufacturing (DPM) process.</li>
+									</ul>
+								</article>
+
+								<article class="experience-item">
+									<h4>C&SI Alliance Intern</h4>
+									<p><strong>DASSAULT SYSTÈMES</strong> | Jun 2023 - Dec 2023</p>
+									<ul>
+										<li>Demonstrated proficiency in 3DEXPERIENCE platform,
+											showcasing role-based and community configuration skills.</li>
+										<li>Successfully took on roles like Data Steward and Data Viewer in Netvibes.</li>
+										<li>Developed a comprehensive community for a C&SI Alliance partner on 3DEXPERIENCE platform.</li>
+										<li>Demonstrated comprehensive market dynamics understanding through market analysis for Battery Initiative.</li>
+									</ul>
+								</article>
+							</div>
+						</section>
+
+
+						<section id="three">
+								<div class="container">
+									<h3>Research & Projects</h3>
+									<p>I have led and contributed to numerous research projects, focusing on the application of AI, machine learning, and image processing to solve complex problems in healthcare and diagnostics.</p>
 									
-									<div class="experience">
-										<div style="display: flex; align-items: center;">
-											<img src="https://www.ltts.com/sites/default/files/styles/author_image/public/blogs/2018/07/LTTS-logo.jpg?itok=nXrz5oBt" alt="L&T Technology Services Logo" style="width: 120px; height: 100px; margin-right: 20px;">
-											<div style="display: flex; flex-direction: column; justify-content: center;">
-												<h4>L&T Technology and Services</h4>
-												<p>Data Science Intern</p>
-												<p>Jan 2024 - Apr 2024</p>
-											</div>
-										</div>
-										<ul>
-											<li>Integrated a chatbot using Flask and ChatGPT.</li>
-											<li>Compared data using machine learning models.</li>
-											<li>Predicted missing parts in the Engineering Bill of Materials (EBOM) of a seat assembly.</li>
-											<li>Analyzed 3D CAD Model data for No Good Position and clash detection for DPM.</li>
-										</ul>
-									</div>
-							
-									<div class="experience">
-										<div style="display: flex; align-items: center;">
-											<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi8fIFkw2JKfMa3YZNuGJTJ87lOcTzaxAalA&s" alt="Dassault Systèmes Logo" style="width: 120px; height: 100px; margin-right: 20px;">
-											<div style="display: flex; flex-direction: column; justify-content: center;">
-												<h4>Dassault Systèmes</h4>
-												<p>C&SI Alliance Intern</p>
-												<p>Jun 2023 - Dec 2023</p>
-											</div>
-										</div>
-										<ul>
-											<li>Demonstrated strong 3DEXPERIENCE platform competence.</li>
-											<li>Applied AI and ML technologies in practical scenarios.</li>
-											<li>Worked hands-on with Netvibes as Data Steward and Data Viewer.</li>
-											<li>Developed a community on the 3DEXPERIENCE platform for C&SI partner.</li>
-										</ul>
-									</div>
-							
-									<div class="experience">
-										<div style="display: flex; align-items: center;">
-											<img src="https://media.licdn.com/dms/image/v2/C510BAQFp9WAQW0Mvcg/company-logo_200_200/company-logo_200_200/0/1631422330387/yoshops_logo?e=2147483647&v=beta&t=aTL_5218qIVKjilppS-HZ1xxzP7JFR8zmQMnTNxh89A" alt="YoShops Logo" style="width: 120px; height: 100px; margin-right: 20px;">
-											<div style="display: flex; flex-direction: column; justify-content: center;">
-												<h4>YoShops</h4>
-												<p>Data Science Intern</p>
-												<p>Jun 2023 - Aug 2023</p>
-											</div>
-										</div>
-										<ul>
-											<li>Utilized data analysis techniques for business decision-making.</li>
-											<li>Generated actionable insights from complex datasets.</li>
-											<li>Created reports and visualizations to communicate findings to stakeholders.</li>
-										</ul>
-									</div>
-								</div>
-							</section>
-
-						<!-- Three -->
-							<section id="three">
-								<div class="container">
-									<h3>Projects</h3>
-									<p>Throughout my academic and professional journey, I’ve had the privilege of working on innovative projects that reflect my passion for artificial intelligence, machine learning, and their real-world applications. These projects allowed me to solve complex problems, collaborate with cross-functional teams, and explore advanced technologies.<br>
-										<br>
-										Each project showcases my ability to integrate AI and ML models with modern technologies like IoT, cloud computing, and big data analytics. From healthcare to engineering, these projects illustrate my commitment to using data-driven solutions to address industry-specific challenges.</p>
-									<div class="features">
-
-										<article>
-											<a href="#" class="image"><img src="images/pic.10.png" alt="" /></a>
-											<div class="inner">
-												<h4>Adverse Drug Effects in Diabetic Patients Based on Sleep Patterns, Food Intake, and Drug Type</h4>
-												<h6>Current Master’s Dissertation Project</h6>
-												<p> My Master's dissertation aims to understand the interdependence between medication, sleep behavior, and dietary 
-													patterns in diabetic patients to predict Adverse Drug Reactions (ADRs). The research uses a data-driven 
-													predictive modeling approach to develop a machine learning framework that correlates drug intake with 
-													changes in sleep and dietary habits. The methodology includes collecting and integrating anonymized patient 
-													datasets, integrating data preprocessing, feature engineering, and model development using Random Forest, XGBoost, 
-													and LSTM architectures. The goal is to deliver a validated prediction model and personalized lifestyle and drug interaction 
-													recommendations, enhancing treatment adherence and patient safety.</p>
-											</div>
-										</article>
-
-										
-										<article>
-											<a href="#" class="image"><img src="images/pic09.png" alt="" /></a>
-											<div class="inner">
-												<h4>HeartSync: A Vision-Based Real-Time Vital Signs Monitoring System</h4>
-												<p> This project uses a webcam to estimate vital signs like heart rate, 
-													respiratory rate, and body temperature in real-time. It uses computer vision and signal processing techniques 
-													to detect physiological cues and computes BPM and RPM using Fast Fourier Transform. The system has a modular 
-													Python-based GUI for user interaction and is suitable for home-based health tracking and telemedicine. It also 
-													includes cloud-based data logging via Google Sheets and is adaptable to mobile platforms. Future work will focus 
-													on clinical validation, stress level prediction, and SpO₂ estimation.</p>
-											</div>
-										</article>
-										
-										<article>
-											<a href="#" class="image"><img src="images/pic07.jpeg" alt="" /></a>
-											<div class="inner">
-												<h4>Automated Breast Cancer Detection and Segmentation Using Image Processing Techniques</h4>
-												<p> This project aims to develop an automated breast cancer segmentation and classification system using image processing 
-													and deep learning techniques. Building on the CBIS-DDSM dataset, the system uses a multi-model approach, including 
-													a U-Net for tumor segmentation and a ResNet50-based pathology classifier. A MATLAB-based GUI allows radiologists 
-													to interact with the algorithm, upload mammograms, perform automated analysis, and visualize results. The model 
-													demonstrated strong segmentation performance (99.25% accuracy) and effective classification, but limitations in 
-													precision suggest further refinement. </p>
-											</div>
-										</article>
-
+									<article class="project-article-item">
+										<div class="inner">
+											<a href="#" class="image image-wrap-left"><img src="images/pic.10.png" alt="Diabetes Drug Research Visualization" /></a>
 											
-										<article>
-											<a href="#" class="image"><img src="images/pic08.jpeg" alt="" /></a>
-											<div class="inner">
-												<h4>Stroke Risk Predictor & Classifier using and Artificial intelligence and Machine Learning</h4>
-												<p> The project aims to develop a machine learning-based tool for stroke risk prediction and classification,
-													utilizing clinical and demographic data. Early detection of stroke can improve patient outcomes and 
-													reduce healthcare costs. Multiple machine learning models, including Logistic Regression, Random Forest, 
-													and Support Vector Machines, were trained and evaluated on a heavily imbalanced dataset. The tool was 
-													integrated into a user-friendly front end, prioritizing ethical considerations like bias reduction and 
-													transparency..</p>
+											<h4>Adverse Drug Effects in Diabetic Patients</h4>
+											<p><strong>Role:</strong> MSc Thesis Researcher | <strong>Affiliation:</strong> University of Warwick</p>
+											<p>Using AI and ML techniques to analyse adverse drug reactions in diabetic patients, considering patient demographics, drug types, and clinical variables. The goal is to develop predictive models to identify high-risk combinations and support safer, personalized treatment plans.</p>
+											
+											<div class="project-highlights">
+												<strong>Key Highlights:</strong>
+												<ul>
+													<li><span class="icon solid fa-graduation-cap"></span>Master's Thesis Project guided by Prof. Michael Chappell.</li>
+													<li><span class="icon solid fa-chart-line"></span>Focuses on predictive modeling for personalized drug safety.</li>
+												</ul>
 											</div>
-										</article>
-										
-										<article>
-											<a href="#" class="image"><img src="images/pic01.png" alt="" /></a>
-											<div class="inner">
-												<h4>Smart Non-Invasive Health Monitoring for Glucose</h4>
-												<p>This project focused on building a real-time health monitoring system using wearable 
-													IoT devices to gather patient data non-invasively. A key feature was the development of a
-													glucose identification model, which accurately detected blood glucose levels without 
-													invasive methods, offering a convenient solution for diabetic patients. Machine learning 
-													algorithms processed the data to provide actionable insights, enabling healthcare providers to 
-													make more informed decisions, ultimately improving patient outcomes and reducing the strain on 
-													traditional healthcare resources.</p>
+										</div>
+									</article>
+									
+									<article class="project-article-item">
+										<div class="inner">
+											<a href="#" class="image image-wrap-left"><img src="images/pic07.jpeg" alt="Breast Cancer Detection GUI" /></a>
+											
+											<h4>Automated Breast Cancer Detection & Segmentation</h4>
+											<p><strong>Role:</strong> Lead Researcher | <strong>Affiliation:</strong> University of Warwick</p>
+											<p>Designed and deployed an automated system using advanced image processing, ML, and deep learning for detecting and segmenting breast cancer from medical images. Validated system performance on benchmark datasets.</p>
+											
+											<div class="project-highlights">
+												<strong>Key Highlights:</strong>
+												<ul>
+													<li><span class="icon solid fa-hospital"></span>Led research work in support of the NHS.</li>
+													<li><span class="icon solid fa-microscope"></span>Deployed as a prototype for clinical testing.</li>
+													<li><span class="icon solid fa-file-alt"></span>Published at ICTS4eHealth 2025 Conference.</li>
+												</ul>
 											</div>
-										</article>
+										</div>
+									</article>
 
-										<article>
-											<a href="#" class="image"><img src="images/pic02.png" alt="" /></a>
-											<div class="inner">
-												<h4>Tooth GenAI</h4>
-												<p>In this project an AI-powered tool designed to assist dentists in diagnosing dental conditions and planning treatments. 
-													The system was deployed at the Faculty of Dental Sciences, offering a data-driven approach to periodontology 
-													and improving accuracy in dental assessments. Tooth GenAI highlights the potential of AI in revolutionizing healthcare diagnostics.</p>
+									<article class="project-article-item">
+										<div class="inner">
+											<a href="#" class="image image-wrap-left"><img src="images/pic02.png" alt="Tooth GenAI Software UI" /></a>
+											
+											<h4>Tooth GenAI: Advanced Dental Diagnosis System</h4>
+											<p><strong>Role:</strong> Lead Researcher (Undergraduate Dissertation)</p>
+											<p>Led this research project, funded by the Government of India. Developed, tested, and deployed a generative AI model to enhance dental diagnosis accuracy and streamline treatment planning workflows, coordinating a multidisciplinary team.</p>
+											
+											<div class="project-highlights">
+												<strong>Key Highlights:</strong>
+												<ul>
+													<li><span class="icon solid fa-award"></span>Funded by the Government of India.</li>
+													<li><span class="icon solid fa-certificate"></span>Patent in final stages of acceptance.</li>
+													<li><span class="icon solid fa-clinic-medical"></span>Deployed at M S Ramaiah Hospital (Dept. of Periodontology).</li>
+													<li><span class="icon solid fa-trophy"></span>Received Best Project Award.</li>
+												</ul>
 											</div>
-										</article>
+										</div>
+									</article>
+									
+									<article class="project-article-item">
+										<div class="inner">
+											<a href="#" class="image image-wrap-left"><img src="images/pic01.png" alt="Non-invasive glucose sensor" /></a>
 
-										<article>
-											<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Face and Action Detection for Crime Prevention</h4>
-												<p> In this project a novel face and action detection technology for crime
-													prevention and public security was developed. The technology uses real-time capabilities
-													to reduce response times and identify signs of aggression. However,
-													ethical concerns about privacy and potential discrimination need to be
-													addressed. The project aims to use computer vision and data analytics to
-													detect human faces and violent actions in videos. The paper emphasizes
-													the potential of these technologies in ensuring public safety, but calls for
-													cautious and ethical implementation.</p>
+											<h4>Non-Invasive Glucose Monitoring System using AI</h4>
+											<p><strong>Role:</strong> Researcher | <strong>Affiliation:</strong> M S Ramaiah University</p>
+											<p>Focused on building a real-time health monitoring system using wearable IoT devices and biomedical sensors to gather patient data and accurately detect blood glucose levels non-invasively.</p>
+											
+											<div class="project-highlights">
+												<strong>Key Highlights:</strong>
+												<ul>
+													<li><span class="icon solid fa-certificate"></span>Patent Pending for the novel system.</li>
+													<li><span class="icon solid fa-trophy"></span>Ramaiah Hackathon Best Project Award (2023).</li>
+													<li><span class="icon solid fa-wifi"></span>Integrates AI, Biomedical Sensors, and IoT.</li>
+												</ul>
 											</div>
-										</article>
+										</div>
+									</article>
 
-										<article>
-											<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>IoT Air Pollution on Monitoring System</h4>
-												<p>Developed an advanced IoT-based system for real-time air pollution
-													monitoring, utilizing sensors to collect environmental data. Implemented
-													data analysis and visualization techniques to provide actionable insights
-													on air quality. Enhanced system performance through efficient data
-													processing and integration with cloud services, contributing to improved
-													environmental awareness and public health safety.</p>
+									<article class="project-article-item">
+										<div class="inner">
+											<a href="#" class="image image-wrap-left"><img src="images/pic09.png" alt="Heart-Syn Vital Signs GUI" /></a>
+											
+											<h4>Heart-Syn: AI-Driven Cardiac Health Monitoring</h4>
+											<p><strong>Role:</strong> Researcher | <strong>Affiliation:</strong> University of Warwick</p>
+											<p>This project uses a webcam to estimate vital signs like heart rate, respiratory rate, and body temperature in real-time. It leverages computer vision and Fast Fourier Transform to compute physiological cues, suitable for home health tracking.</p>
+											
+											<div class="project-highlights">
+												<strong>Key Highlights:</strong>
+												<ul>
+													<li><span class="icon solid fa-video"></span>Vision-based, real-time vital sign monitoring.</li>
+													<li><span class="icon solid fa-laptop-medical"></span>Designed for telemedicine and home-based health tracking.</li>
+												</ul>
 											</div>
-										</article>
+										</div>
+									</article>
 
-										<article>
-											<a href="#" class="image"><img src="images/pic.11.png" alt="" /></a>
-											<div class="inner">
-												<h4>F1 Lap Time Forecasting using Telemetry Data</h4>
-												<p> This project involved the development of a desktop application that enables fast, 
-													intuitive analysis of Formula 1 telemetry data from the 2018–2023 seasons. 
-													Built using PyQt5 and powered by the FastF1 Python library, the tool allows users 
-													to explore and compare race sessions by selecting the year, track, driver, and analysis type. 
-													Key functionalities include visual comparisons of lap times, sector performances, and full telemetry traces, 
-													all without requiring any code interaction. The application also features dynamic plot generation, export options 
-													for saving visuals, and a local caching system to speed up repeated queries. Designed for motorsport analysts 
-													and F1 enthusiasts alike, the tool transforms complex telemetry data into accessible, actionable insights 
-													through a clean and responsive GUI.</p>
-											</div>
-										</article>
-
-										<article>
-											<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>Predicting Missing Parts in EBOM</h4>
-												<p>As part of my role at L&T Technology Services, I worked on predicting missing 
-													components in the Engineering Bill of Materials (EBOM) for seat assemblies. 
-													Using machine learning algorithms, the project significantly improved accuracy in
-													 assembly lines, reducing manual intervention and enhancing overall efficiency in 
-													 production.</p>
-											</div>
-										</article>
-
-
-										<article>
-											<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
-											<div class="inner">
-												<h4>3DEXPERIENCE Community for a C&SI Alliance Partner</h4>
-												<h7>Creating a Data-Driven Ecosystem on the 3DEXPERIENCE Platform</h7>
-												<p>During my internship at Dassault Systèmes, I developed a robust community 
-													on the 3DEXPERIENCE platform for a key C&SI partner. This project focused 
-													on consolidating case studies, customer experiences, and data-driven insights, helping 
-													stakeholders make informed decisions through a centralized knowledge hub.</p>
-											</div>
-										</article>
-
-									</div>
 								</div>
 							</section>
 
-						<!-- Four -->
-							<section id="four">
-								<section id="publications">
-									<div class="container">
-										<h3>Publications</h3>
-										<table>
-											<thead>
-												<tr>
-													<th>Serial No.</th>
-													<th>Name</th>
-													<th>Publisher</th>
-													<th>Position</th>
-													<th>Type</th>
-													<th>Date</th>
-												</tr>
-											</thead>
-											<tbody>
+						<section id="four">
+								<div class="container">
+									<h3>Publications</h3>
+									<p>I have authored and co-authored 15+ research papers published in Scopus-indexed journals and conferences. A selection is included below.</p>
+									
+									<ol class="publications-list">
+										
+										<li class="pub-item">
+											<strong class="pub-title">Automated Breast Cancer Detection and Segmentation Using Image Processing Techniques</strong>
+											<div class="pub-details">
+												<span><strong>Role:</strong> Author</span>
+												<span><strong>Publisher:</strong> IEEE</span>
+												<span><strong>Type:</strong> Conference Paper</span>
+												<span><strong>Date:</strong> July 2025</span>
+											</div>
+										</li>
+										
+										<li class="pub-item">
+											<strong class="pub-title">Enabling Autonomous and Intelligent Device Functionality Through IoT Integration</strong>
+											<div class="pub-details">
+												<span><strong>Role:</strong> Co-Author</span>
+												<span><strong>Publisher:</strong> IGI Global</span>
+												<span><strong>Type:</strong> Journal Chapter</span>
+												<span><strong>Date:</strong> May 2025</span>
+											</div>
+										</li>
 
-												<tr>
-													<td>1</td>
-													<td>Automated Breast Cancer Detection and Segmentation Using Image Processing Techniques </td>
-													<td>IEEE</td>
-													<th>Author</th>
-													<td>Conference Paper</td>
-													<td>July 2025</td>
-												</tr>
+										<li class="pub-item">
+											<strong class="pub-title">Synergising 6G technologies, artificial intelligence, and green innovations: A path towards sustainable and intelligent connectivity</strong>
+											<div class="pub-details">
+												<span><strong>Role:</strong> Co-Author</span>
+												<span><strong>Publisher:</strong> Elsevier</span>
+												<span><strong>Type:</strong> Journal Chapter</span>
+												<span><strong>Date:</strong> April 2025</span>
+											</div>
+										</li>
 
-												
-												<tr>
-													<td>2</td>
-													<td>Enabling Autonomous and Intelligent Device Functionality Through IoT Integration </td>
-													<td>IGI Global</td>
-													<th>C0-Author</th>
-													<td>Journal Chapter</td>
-													<td>May 2025</td>
-												</tr>
-												
-												<tr>
-													<td>3</td>
-													<td>Synergising 6G technologies, artificial intelligence, and green innovations: A path towards sustainable and intelligent connectivity </td>
-													<td>Elsevier</td>
-													<th>C0-Author</th>
-													<td>Journal Chapter</td>
-													<td>April 2025</td>
-												</tr>
-												
-												<tr>
-													<td>4</td>
-													<td>Advancements in AI-Driven Dentistry - Tooth GenAI’s Impact on Dental Diagnosis and Treatment Planning</td>
-													<td>IEEE Xplore</td>
-													<th>Author</th>
-													<td>Conference Paper</td>
-													<td>August 2024</td>
-												</tr>
-												<tr>
-													<td>5</td>
-													<td>Threat Hunting in System Using Log Analysis</td>
-													<td>IEEE Xplore</td>
-													<th>C0-Author</th>
-													<td>Conference Paper</td>
-													<td>April 2024</td>
-												</tr>
-												<tr>
-													<td>6</td>
-													<td>Exploring the Applications and Challenges of Digital Twins in Various Industries</td>
-													<td>IEEE Xplore</td>
-													<th>C0-Author</th>
-													<td>Conference Paper</td>
-													<td>April 2024</td>
-												</tr>
-												<tr>
-													<td>7</td>
-													<td>Computational Intelligence and Its Transformative Influence</td>
-													<td>IEEE Xplore</td>
-													<th>C0-Author</th>
-													<td>Conference Paper</td>
-													<td>April 2024</td>
-												</tr>
-												<tr>
-													<td>8</td>
-													<td>Robotic Process Automation - In-Depth Analysis of Advanced Automation Techniques and Technologies</td>
-													<td>IGI Global</td>
-													<th>C0-Author</th>
-													<td>Book Chapter</td>
-													<td>March 2024</td>
-												</tr>
-												<tr>
-													<td>9</td>
-													<td>A Non-Invasive Approach Using Machine Learning and IoT for Health Monitoring</td>
-													<td>IEEE Xplore</td>
-													<th>Author</th>
-													<td>Conference Paper</td>
-													<td>March 2024</td>
-												</tr>
-												<tr>
-													<td>10</td>
-													<td>Gaze Corporate: A Corporate Profiling Website</td>
-													<td>IEEE Xplore</td>
-													<th>Co-Author</th>
-													<td>Conference Paper</td>
-													<td>March 2024</td>
-												</tr>
-												<tr>
-													<td>11</td>
-													<td>A Non-Invasive Approach Using Machine Learning and IoT for Health Monitoring</td>
-													<td>IEEE Xplore</td>
-													<th>Author</th>
-													<td>Conference Paper</td>
-													<td>March 2024</td>
-												</tr>
-												<tr>
-													<td>12</td>
-													<td>Robotic and Cyber-Attack Classification Using AI and ML Techniques</td>
-													<td>IEEE Xplore</td>
-													<th>C0-Author</th>
-													<td>Conference Paper</td>
-													<td>January 2024</td>
-												</tr>
-												<tr>
-													<td>13</td>
-													<td>Application of AI and Blockchain Technologies in the Medical Domain</td>
-													<td>IGI Global</td>
-													<th>C0-Author</th>
-													<td>Book Chapter</td>
-													<td>January 2024</td>
-												</tr>
-												<tr>
-													<td>14</td>
-													<td>Smart Non-Invasive Real-Time Health Monitoring using ML and IoT</td>
-													<td>IEEE Xplore</td>
-													<th>C0-Author</th>
-													<td>Conference Paper</td>
-													<td>December 2023</td>
-												</tr>
-												<tr>
-													<td>15</td>
-													<td>Face and Action Detection for Crime Prevention - Balancing Promise and Ethical Considerations</td>
-													<td>IEEE Xplore</td>
-													<th>C0-Author</th>
-													<td>Conference Paper</td>
-													<td>November 2023</td>
-												</tr>
-												<tr>
-													<td>16</td>
-													<td>AI & ML Methodologies in Navy & Their Systems</td>
-													<td>IEEE Xplore</td>
-													<th>C0-Author</th>
-													<td>Conference Paper</td>
-													<td>October 2023</td>
-												</tr>
-												<tr>
-													<td>17</td>
-													<td>Intelligent Systems and Methods for Smart City in Multiple Domains</td>
-													<td>IEEE Xplore</td>
-													<th>C0-Author</th>
-													<td>Conference Paper</td>
-													<td>October 2023</td>
-												</tr>
-												<tr>
-													<td>18</td>
-													<td>Artificial Intelligence for Defence - A Comprehensive Study on Applying AI for the Airforce, Navy, and Army</td>
-													<td>IGI Global</td>
-													<th>C0-Author</th>
-													<td>Book Chapter</td>
-													<td>June 2023</td>
-												</tr>
-												<tr>
-													<td>19</td>
-													<td>AI Methodologies in Modern Warfare Systems</td>
-													<td>IEEE Xplore</td>
-													<th>C0-Author</th>
-													<td>Conference Paper</td>
-													<td>December 2022</td>
-												</tr>
-												<tr>
-													<td>20</td>
-													<td>AI & ML Collaboration with Networking Embedded & Wireless Systems</td>
-													<td>IIP Proceedings</td>
-													<th>C0-Author</th>
-													<td>Journal</td>
-													<td>September 2022</td>
-												</tr>
-											</tbody>
-										</table>
-									</div>
-								</section>
+										<li class="pub-item">
+											<strong class="pub-title">Advancements in AI-Driven Dentistry - Tooth GenAI’s Impact on Dental Diagnosis and Treatment Planning</strong>
+											<div class="pub-details">
+												<span><strong>Role:</strong> Author</span>
+												<span><strong>Publisher:</strong> IEEE Xplore</span>
+												<span><strong>Type:</strong> Conference Paper</span>
+												<span><strong>Date:</strong> August 2024</span>
+											</div>
+										</li>
 
-								<!-- Five -->
+										<li class="pub-item">
+											<strong class="pub-title">Threat Hunting in System Using Log Analysis</strong>
+											<div class="pub-details">
+												<span><strong>Role:</strong> Co-Author</span>
+												<span><strong>Publisher:</strong> IEEE Xplore</span>
+												<span><strong>Type:</strong> Conference Paper</span>
+												<span><strong>Date:</strong> April 2024</span>
+											</div>
+										</li>
+
+										<li class="pub-item">
+											<strong class="pub-title">Exploring the Applications and Challenges of Digital Twins in Various Industries</strong>
+											<div class="pub-details">
+												<span><strong>Role:</strong> Co-Author</span>
+												<span><strong>Publisher:</strong> IEEE Xplore</span>
+												<span><strong>Type:</strong> Conference Paper</span>
+												<span><strong>Date:</strong> April 2024</span>
+											</div>
+										</li>
+
+										<li class="pub-item">
+											<strong class="pub-title">Computational Intelligence and Its Transformative Influence</strong>
+											<div class="pub-details">
+												<span><strong>Role:</strong> Co-Author</span>
+												<span><strong>Publisher:</strong> IEEE Xplore</span>
+												<span><strong>Type:</strong> Conference Paper</span>
+												<span><strong>Date:</strong> April 2024</span>
+											</div>
+										</li>
+
+										<li class="pub-item">
+											<strong class="pub-title">Robotic Process Automation - In-Depth Analysis of Advanced Automation Techniques and Technologies</strong>
+											<div class="pub-details">
+												<span><strong>Role:</strong> Co-Author</span>
+												<span><strong>Publisher:</strong> IGI Global</span>
+												<span><strong>Type:</strong> Book Chapter</span>
+												<span><strong>Date:</strong> March 2024</span>
+											</div>
+										</li>
+
+										<li class="pub-item">
+											<strong class="pub-title">A Non-Invasive Approach Using Machine Learning and IoT for Health Monitoring</strong>
+											<div class="pub-details">
+												<span><strong>Role:</strong> Author</span>
+												<span><strong>Publisher:</strong> IEEE Xplore</span>
+												<span><strong>Type:</strong> Conference Paper</span>
+												<span><strong>Date:</strong> March 2024</span>
+											</div>
+										</li>
+
+										<li class="pub-item">
+											<strong class="pub-title">Gaze Corporate: A Corporate Profiling Website</strong>
+											<div class="pub-details">
+												<span><strong>Role:</strong> Co-Author</span>
+												<span><strong>Publisher:</strong> IEEE Xplore</span>
+												<span><strong>Type:</strong> Conference Paper</span>
+												<span><strong>Date:</strong> March 2024</span>
+											</div>
+										</li>
+
+										<li class="pub-item">
+											<strong class="pub-title">A Non-Invasive Approach Using Machine Learning and IoT for Health Monitoring</strong>
+											<div class="pub-details">
+												<span><strong>Role:</strong> Author</span>
+												<span><strong>Publisher:</strong> IEEE Xplore</span>
+												<span><strong>Type:</strong> Conference Paper</span>
+												<span><strong>Date:</strong> March 2024</span>
+											</div>
+										</li>
+
+										<li class="pub-item">
+											<strong class="pub-title">Robotic and Cyber-Attack Classification Using AI and ML Techniques</strong>
+											<div class="pub-details">
+												<span><strong>Role:</strong> Co-Author</span>
+												<span><strong>Publisher:</strong> IEEE Xplore</span>
+												<span><strong>Type:</strong> Conference Paper</span>
+												<span><strong>Date:</strong> January 2024</span>
+											</div>
+										</li>
+
+										<li class="pub-item">
+											<strong class="pub-title">Application of AI and Blockchain Technologies in the Medical Domain</strong>
+											<div class="pub-details">
+												<span><strong>Role:</strong> Co-Author</span>
+												<span><strong>Publisher:</strong> IGI Global</span>
+												<span><strong>Type:</strong> Book Chapter</span>
+												<span><strong>Date:</strong> January 2024</span>
+											</div>
+										</li>
+
+										<li class="pub-item">
+											<strong class="pub-title">Smart Non-Invasive Real-Time Health Monitoring using ML and IoT</strong>
+											<div class="pub-details">
+												<span><strong>Role:</strong> Co-Author</span>
+												<span><strong>Publisher:</strong> IEEE Xplore</span>
+												<span><strong>Type:</strong> Conference Paper</span>
+												<span><strong>Date:</strong> December 2023</span>
+											</div>
+										</li>
+
+										<li class="pub-item">
+											<strong class="pub-title">Face and Action Detection for Crime Prevention - Balancing Promise and Ethical Considerations</strong>
+											<div class="pub-details">
+												<span><strong>Role:</strong> Co-Author</span>
+												<span><strong>Publisher:</strong> IEEE Xplore</span>
+												<span><strong>Type:</strong> Conference Paper</span>
+												<span><strong>Date:</strong> November 2023</span>
+											</div>
+										</li>
+
+										<li class="pub-item">
+											<strong class="pub-title">AI & ML Methodologies in Navy & Their Systems</strong>
+											<div class="pub-details">
+												<span><strong>Role:</strong> Co-Author</span>
+												<span><strong>Publisher:</strong> IEEE Xplore</span>
+												<span><strong>Type:</strong> Conference Paper</span>
+												<span><strong>Date:</strong> October 2023</span>
+											</div>
+										</li>
+
+										<li class="pub-item">
+											<strong class="pub-title">Intelligent Systems and Methods for Smart City in Multiple Domains</strong>
+											<div class="pub-details">
+												<span><strong>Role:</strong> Co-Author</span>
+												<span><strong>Publisher:</strong> IEEE Xplore</span>
+												<span><strong>Type:</strong> Conference Paper</span>
+												<span><strong>Date:</strong> October 2023</span>
+											</div>
+										</li>
+
+										<li class="pub-item">
+											<strong class="pub-title">Artificial Intelligence for Defence - A Comprehensive Study on Applying AI for the Airforce, Navy, and Army</strong>
+											<div class="pub-details">
+												<span><strong>Role:</strong> Co-Author</span>
+												<span><strong>Publisher:</strong> IGI Global</span>
+												<span><strong>Type:</strong> Book Chapter</span>
+												<span><strong>Date:</strong> June 2023</span>
+											</div>
+										</li>
+
+										<li class="pub-item">
+											<strong class="pub-title">AI Methodologies in Modern Warfare Systems</strong>
+											<div class="pub-details">
+												<span><strong>Role:</strong> Co-Author</span>
+												<span><strong>Publisher:</strong> IEEE Xplore</span>
+												<span><strong>Type:</strong> Conference Paper</span>
+												<span><strong>Date:</strong> December 2022</span>
+											</div>
+										</li>
+
+										<li class="pub-item">
+											<strong class="pub-title">AI & ML Collaboration with Networking Embedded & Wireless Systems</strong>
+											<div class="pub-details">
+												<span><strong>Role:</strong> Co-Author</span>
+												<span><strong>Publisher:</strong> IIP Proceedings</span>
+												<span><strong>Type:</strong> Journal</span>
+												<span><strong>Date:</strong> September 2022</span>
+											</div>
+										</li>
+
+									</ol>
+								</div>
+							</section>
+
 								<section id="five">
 									<div class="container">
 				
-										<!-- Education -->
-										<div class="education">
-											<h3>Education</h3>
-											<ul>
-												<li><b>Master of Science in Diagnostics, Data, and Digital Health</b> – University of Warwick (2024-2025, Pursuing)</li>
-												<li><b>Bachelor of Technology in Artificial Intelligence and Machine Learning</b> – M S Ramaiah University of Applied Sciences (2020-2024)</li>
-											</ul>
-										</div>
-				
-										<!-- Skills -->
 										<div class="skills">
-											<h3>Skills</h3>
-											<ul>
-
-												<li><b>AI & ML:</b> Expert in machine learning, deep learning, NLP, and computer vision; skilled at building predictive models from complex datasets.</li>
-												<li><b>Data Science:</b> Proficient in data analysis and big‑data management using Pandas, NumPy, Scikit‑learn, Keras, TensorFlow, and PyTorch, KPIs / Metrics, Data Cleaning, Data Visualisation, Data Analysing </li>
-												<li><b> Medical Imaging & Analytics:</b> Applied AI/ML to healthcare data and imaging; experienced with GDPR/HIPAA compliance for sensitive datasets.</li>
-												<li><b>Technical Skills:</b>b> Fluent in Python, SQL, C++, Java, and HTML; hands‑on with MATLAB, Dashboarding (Power BI and Tableau) 3DEXPERIENCE, NETVIBES, and generative AI (LLMs).</li>
-												<li><b>Cloud & Tools:</b> Skilled with AWS, Google Cloud, Jupyter Notebook, Microsoft Office, and Adobe Creative Cloud.
-												<li><b>Research & Innovation:</b> Published researcher in AI/ML, cybersecurity, and digital‑twin applications; track record of delivering novel solutions.</li>
-												<li><b>Leadership & Communication:</b> Proven leader in cross‑functional teams; excels at translating technical concepts for diverse stakeholders and driving project success.</li>
-
-											</ul>
+											<h3>Technical Skills</h3>
+											<div class="features skills-grid">
+												<article>
+													<div class="inner">
+														<h4><span class="icon solid fa-brain"></span>Machine Learning & AI</h4>
+														<p>Built and deployed custom predictive models for ADR analysis, cancer detection, and dental diagnostics using Scikit-learn, TensorFlow, and Keras; LLMs development and fine-tuning.</p>
+													</div>
+												</article>
+												<article>
+													<div class="inner">
+														<h4><span class="icon solid fa-microscope"></span>Medical Imaging</h4>
+														<p>Applied image pre-processing, segmentation, and classification for automated diagnostics, validated on benchmark datasets.</p>
+													</div>
+												</article>
+												<article>
+													<div class="inner">
+														<h4><span class="icon solid fa-chart-bar"></span>Data Analysis</h4>
+														<p>Performed statistical analysis, feature engineering, and visualisation with Python libraries.</p>
+													</div>
+												</article>
+												<article>
+													<div class="inner">
+														<h4><span class="icon solid fa-code"></span>Programming</h4>
+														<p>Proficient in Python, MATLAB, SQL, HTML, CSS and basics of Java Script.</p>
+													</div>
+												</article>
+												<article>
+													<div class="inner">
+														<h4><span class="icon solid fa-tools"></span>Tools</h4>
+														<p>Familiar with Git, cloud workflows (AWS), Windows, and macOS.</p>
+													</div>
+												</article>
+												<article>
+													<div class="inner">
+														<h4><span class="icon solid fa-file-alt"></span>Research & Dissemination</h4>
+														<p>Published and presented at international conferences; strong scientific writing and teamwork experience.</p>
+													</div>
+												</article>
+											</div>
 										</div>
-										<!-- Specializations -->
+
 										<div class="specializations">
-											<h3>Specializations</h3>
+											<h3>Certifications & Specializations</h3>
 											<ul>
-												<li><b>AI in Healthcare Specialization</b> – Stanford University</li>
-												<li><b>Google IT Automation with Python Professional Certificate</b> – Google</li>
-												<li><b>Blockchain Specialization</b> – University at Buffalo</li>
-												<li><b>Cybersecurity Specialization</b> – Google</li>
-												<li><b>Leadership Skills </b> –  IIM Ahmedabad</li>
+												<li><b>AI in Healthcare Specialization</b> – Stanford University (2023-2024)</li>
+												<li><b>Leadership Skills</b> – IIM Ahmedabad (2024-2025)</li>
+												<li><b>Google IT Automation with Python</b> – Google (2024)</li>
+												<li><b>Blockchain Specialization</b> – University of Buffalo, USA (2024)</li>
+												<li><b>TeamWork Program</b> – University of Warwick and Monash (2025)</li>
+												<li><b>Project Management Essentials</b> – Howard University (2024)</li>
+												<li><b>Research Integrity: Concise (core course)</b> – Epigeum (2024)</li>
 											</ul>
 										</div>
 									
@@ -571,36 +643,40 @@
 								</section>
 
 
-<!-- Six -->
-<section id="six"></section>
-    <div class="container">
-        <h3>References</h3>
-        <p>If you would like to know more about my professional experience, please feel free to contact my references:</p>
-        <ul>
-            <li><b>Vijayalakshmi Ahanathapillai</b> - University of Warwick / Assistant Professor & Course leader</li>
-	    <li><b>Asok Kumar Roy</b> - L&T Technology and Services / PLM Delivery Manager</li>
-            <li><b>Koodli Subramanya</b> - Dassault Systèmes India/ Director – C&SI Alliance</li>
-            <li><b>Dr. A. Prabhakar</b> - M S Ramaiah University of Applied Sciences / Professor</li> 
-	    <li><b>Dr. Jyothi AP</b> - M S Ramaiah University of Applied Sciences / Assistant Professor and Programme Head (M&C)</li>
-        </ul>	
-    </div>
-</section>
+						<section id="six">
+							<div class="container">
+								<h3>References</h3>
+								<p>Professional references are available upon request. Key contacts include:</p>
+								<ul>
+									<li><b>Dr. Aruni Ghose</b> - Chief Medical Officer, OncoFlow</li>
+									<li><b>Dr. Viji Ahanathapillai</b> - Assistant Professor and Course Leader (DDDH), Warwick University</li>
+									<li><b>Asok Kumar Roy</b> - PLM Delivery Manager, L&T Technology and Services</li>
+									<li><b>Koodli Subramanya</b> - Director C&SI Alliance, Dassault Systèmes India</li>
+									<li><b>Dr. Jyothi A P</b> - Assistant Professor and Programme Head (M&C), M S Ramaiah University of Applied Sciences</li>
+								</ul>	
+							</div>
+						</section>
+					</div>
 
-				<!-- Footer -->
-<section id="footer">
-    <div class="container">
-        <ul class="contact-details">
-			<h3>My Contact Details</h3>
-            <li><b>Phone:</b> +44 078808 22460 / +91 95355 92790</li>
-            <li><b>Email:</b> <a href="mailto:anirudh2406@gmail.com">anirudh2406@gmail.com</a></li>
-        </ul>
-        <ul class="copyright">
-            <li>&copy; Anirudh Shankar. All rights reserved.</li>
-        </ul>
-    </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
+				<section id="footer">
+					<div class="container">
+						<ul class="contact-details">
+							<h3>Contact Details</h3>
+							<li><b>Phone (UK):</b> +44 7880 822 460</li>
+							<li><b>Phone (India):</b> +91 95355 92790</li>
+							<li><b>Email (Personal):</b> <a href="mailto:anirudh2406@gmail.com">anirudh2406@gmail.com</a></li>
+							<li><b>Email (Academic):</b> <a href="mailto:Anirudh.Shankar@warwick.ac.uk">Anirudh.Shankar@warwick.ac.uk</a></li>
+							<li><b>Email (Work):</b> <a href="mailto:anirudh.shankar@oncoflow.co.uk">anirudh.shankar@oncoflow.co.uk</a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Anirudh Shankar. All rights reserved.</li>
+						</ul>
+					</div>
+				</section>
+			</div>
+
+		<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
 			<script src="assets/js/browser.min.js"></script>
@@ -610,9 +686,3 @@
 
 	</body>
 </html>
-
-
-
-
-
-
